@@ -3,13 +3,11 @@
 CURR_DIR=`pwd`
 
 usage () {
-	echo "Usage: $0 <rpi_kernel_type> <rpi_kernel_version>"
+	echo "Usage: $0 <rpi_kernel_type>"
 	printf "\nArg <rpi_kernel_type>:\n\
 	- \"kernel\"	:	For Pi 1, Pi Zero, Pi Zero W, or Compute Module.\n\
 	- \"kernel7\"	:	For Pi 2, Pi 3, Pi 3+, or Compute Module 3.\n\
-	- \"kernel7l\"	:	For Raspberry Pi 4.\n\n"
-	printf "Arg <rpi_kernel_version>:\
-	Execute \`uname -r\` on your running Raspbian.\n"
+	- \"kernel7l\"	:	For Raspberry Pi 4.\n"
 }
 
 missing () {
@@ -25,7 +23,7 @@ elif [ ! -d rtl8188eus ]; then
 	missing "Aircrack-ng's RTL8188EUS kernel module src"
 fi
 
-if [ $# -ne 2 ]; then
+if [ $# -ne 1 ]; then
 	usage
 	exit 1
 fi
@@ -38,7 +36,7 @@ else
 fi
 
 KERNEL=$1
-KVER=$2
+KVER=4.19
 
 print_target_debug() {
 	printf "Target boards: Raspberry Pi "
