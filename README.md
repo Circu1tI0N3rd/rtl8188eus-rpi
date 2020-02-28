@@ -1,7 +1,7 @@
 # RTL8188EUS cross compilation setup for Raspberry Pi
 _Note: also works for other kernel modules_
 
-# Slightly more important note: if you can improve the script, please open an issue to let me know, thanks!
+** Slightly more important note: if you can improve the script, please open an issue to let me know, thanks! **
 
 ## INTRO:
 This is my setup to compile a Raspberry Pi usable driver for my TP-LINK TL-WN725N USB WiFi dongle (mine used RTL8188EUS IC). (***Yes, the included driver in Raspbian sucks!***)

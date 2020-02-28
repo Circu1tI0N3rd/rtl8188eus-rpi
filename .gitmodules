@@ -1,12 +1,3 @@
-[submodule "rpi-kernel-src"]
-	path = linux
-	url = https://github.com/raspberrypi/linux.git
-[submodule "rpi-toolchain"]
-	path = tools
-	url = https://github.com/raspberrypi/tools.git
-[submodule "rtl8188eus-src"]
-	path = rtl8188eus
-	url = https://github.com/aircrack-ng/rtl8188eus.git
 [submodule "linux"]
 	path = linux
 	url = https://github.com/raspberrypi/linux.git
