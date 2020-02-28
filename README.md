@@ -39,14 +39,12 @@ chmod +x compile.sh
 Run "./compile.sh" without arguments:
 
 ```
-Usage: ./compile.sh <rpi_kernel_type> <rpi_kernel_version>
+Usage: ./compile.sh <rpi_kernel_type>
 
 Arg <rpi_kernel_type>:
     - "kernel"  :   For Pi 1, Pi Zero, Pi Zero W, or Compute Module.
     - "kernel7" :   For Pi 2, Pi 3, Pi 3+, or Compute Module 3.
     - "kernel7l"    :   For Raspberry Pi 4.
-
-Arg <rpi_kernel_version>:   Execute `uname -r` on your running Raspbian.
 ```
 
 _As for kernel version:_ if you're unsure, use the default branch name of [raspberrypi/linux](https://github.com/raspberrypi/linux)
