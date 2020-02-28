@@ -1,6 +1,8 @@
 # RTL8188EUS cross compilation setup for Raspberry Pi
 _Note: also works for other kernel modules_
 
+# Slightly more important note: if you can improve the script, please open an issue to let me know, thanks!
+
 ## INTRO:
 This is my setup to compile a Raspberry Pi usable driver for my TP-LINK TL-WN725N USB WiFi dongle (mine used RTL8188EUS IC). (***Yes, the included driver in Raspbian sucks!***)
 
@@ -21,18 +23,33 @@ sudo apt-get install git bc bison flex libssl-dev make libc6-dev libncurses5-dev
 
 ```
 git clone https://github.com/Circu1tI0N3rd/rtl8188eus-rpi
+cd rtl8188eus-rpi
 git submodules update --init
 ```
 
 Take your time as RPi kernel source is quite large!
-
-### RUN THE SCRIPT:
+Then, make sure the script is executable:
 
 ```
-<Will be added soon>
+chmod +x compile.sh
 ```
 
+### UASGE:
 
+Run "./compile.sh" without arguments:
+
+```
+Usage: ./compile.sh <rpi_kernel_type> <rpi_kernel_version>
+
+Arg <rpi_kernel_type>:
+    - "kernel"  :   For Pi 1, Pi Zero, Pi Zero W, or Compute Module.
+    - "kernel7" :   For Pi 2, Pi 3, Pi 3+, or Compute Module 3.
+    - "kernel7l"    :   For Raspberry Pi 4.
+
+Arg <rpi_kernel_version>:   Execute `uname -r` on your running Raspbian.
+```
+
+_As for kernel version:_ if you're unsure, use the default branch name of [raspberrypi/linux](https://github.com/raspberrypi/linux)
 
 ## REFERENCES:
 - [Raspberry Pi kernel building instruction](https://www.raspberrypi.org/documentation/linux/kernel/building.md)
